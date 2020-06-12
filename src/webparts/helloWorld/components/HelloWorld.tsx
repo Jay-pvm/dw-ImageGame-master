@@ -2,8 +2,7 @@ import * as React from 'react';
 import styles from './HelloWorld.module.scss';
 import { IHelloWorldProps } from './IHelloWorldProps';
 import { escape } from '@microsoft/sp-lodash-subset';
-import QuizBee from './Game.js';
-import { IReactPartialStateUpdateState } from './IReactPartialStateUpdateState';
+import Game from "./Game";
 
 export default class HelloWorld extends React.Component<IHelloWorldProps, {}> {
   public render(): React.ReactElement<IHelloWorldProps> {
@@ -14,7 +13,7 @@ export default class HelloWorld extends React.Component<IHelloWorldProps, {}> {
             <div className={ styles.column }>
               <span className={ styles.title }>Welcome to the Image game!</span>
               <p className={ styles.subTitle }>Click the right answer corresponding to the images.</p>
-              <p className={ styles.description }>{escape(this.props.description)}</p>
+              <div className={ styles.container }>{Game}</div>
             </div>
           </div>
         </div>
