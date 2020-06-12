@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
   "solution": {
-    "name": "dw-image-game-master-client-side-solution",
-    "id": "4dcb51ca-12cd-4c76-a002-592e8920e083",
+    "name": "dw-imagegame-client-side-solution",
+    "id": "02db4f23-ed50-4167-ad5c-39234c325205",
     "version": "1.0.0.0",
     "includeClientSideAssets": true,
     "isDomainIsolated": false
   },
   "paths": {
-    "zippedPackage": "solution/dw-image-game-master.sppkg"
+    "zippedPackage": "solution/dw-imagegame.sppkg"
   }
 }

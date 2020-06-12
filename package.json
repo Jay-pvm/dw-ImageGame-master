@@ -1,5 +1,5 @@
 {
-  "name": "dw-image-game-master",
+  "name": "dw-imagegame",
   "version": "0.0.1",
   "private": true,
   "main": "lib/index.js",

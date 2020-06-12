@@ -3,8 +3,8 @@
     "isCreatingSolution": true,
     "environment": "spo",
     "version": "1.10.0",
-    "libraryName": "dw-image-game-master",
-    "libraryId": "4dcb51ca-12cd-4c76-a002-592e8920e083",
+    "libraryName": "dw-imagegame",
+    "libraryId": "02db4f23-ed50-4167-ad5c-39234c325205",
     "packageManager": "npm",
     "isDomainIsolated": false,
     "componentType": "webpart"

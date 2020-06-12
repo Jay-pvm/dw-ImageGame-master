@@ -7,19 +7,19 @@ import {
 } from '@microsoft/sp-property-pane';
 import { BaseClientSideWebPart } from '@microsoft/sp-webpart-base';
 
-import * as strings from 'HelloWorldWebPartStrings';
-import HelloWorld from './components/HelloWorld';
-import { IHelloWorldProps } from './components/IHelloWorldProps';
+import * as strings from 'GameWebPartStrings';
+import Game from './components/Game';
+import { IGameProps } from './components/IGameProps';
 
-export interface IHelloWorldWebPartProps {
+export interface IGameWebPartProps {
   description: string;
 }
 
-export default class HelloWorldWebPart extends BaseClientSideWebPart <IHelloWorldWebPartProps> {
+export default class GameWebPart extends BaseClientSideWebPart <IGameWebPartProps> {
 
   public render(): void {
-    const element: React.ReactElement<IHelloWorldProps> = React.createElement(
-      HelloWorld,
+    const element: React.ReactElement<IGameProps> = React.createElement(
+      Game,
       {
         description: this.properties.description
       }

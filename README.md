@@ -1,4 +1,4 @@
-## dw-image-game-master
+## dw-imagegame
 
 This is where you include your WebPart documentation.
 
