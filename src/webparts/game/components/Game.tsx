@@ -15,14 +15,14 @@ export default class Game extends React.Component<IGameProps, {}> {
   };
 
   public playAgain = () => {
-    this.getQuestion();
+    this.getQuestions();
     this.setState({
         responses: 0,
         amount: 5,
     });
   }
 
-  public getQuestion = () => {
+  public getQuestions = () => {
       QuestionService().then(question => {
           this.setState({
               questionBank: question
@@ -36,17 +36,18 @@ export default class Game extends React.Component<IGameProps, {}> {
               responses: this.state.responses + 1,
               amount: this.state.amount - 1,
           });
+          return true;
       } else {
           this.setState({
             responses: this.state.responses +1,
-            wrong: true,
-          })
+          });
+          return false;
       }
 
   }
 
   public componentDidMount(){
-      this.getQuestion();
+      this.getQuestions();
   }
 
   public render(): React.ReactElement<IGameProps> {
@@ -60,9 +61,7 @@ export default class Game extends React.Component<IGameProps, {}> {
               <p className={ styles.description }>{escape(this.props.description)}</p>
               <div className={styles.container}>
                 <div className={styles.title}>Quizbee</div>
-
-                {this.state.amount > 0 &&
-                    this.state.questionBank.map(({question, answers, correct, questionId}) => (
+                  {this.state.questionBank.map(({question, answers, correct, questionId}) => (
                         <QuestionBox
                         question = {question}
                         options = {answers}
@@ -71,9 +70,7 @@ export default class Game extends React.Component<IGameProps, {}> {
                         />
                     )
                     )}
-
-                {/* {this.state.amount === 0 ? ( <Result reponses={this.state.responses} playAgain={this.playAgain} /> ) : null} */}
-              </div>
+                {this.state.amount === 0 ? ( <Result reponses={this.state.responses} playAgain={this.playAgain} /> ) : null}              </div>
             </div>
           </div>
         </div>
