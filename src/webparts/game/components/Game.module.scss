@@ -7,6 +7,13 @@
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
   }
 
+  .image {
+    max-width: 25%;
+    max-height: 25%;
+    background-color: $ms-color-themeSecondary;
+    border-color: $ms-color-themePrimary;
+  }
+
   .row {
     @include ms-Grid-row;
     @include ms-fontColor-white;
