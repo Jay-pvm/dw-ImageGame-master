@@ -1,6 +1,8 @@
 ## dw-imagegame
 
-This is where you include your WebPart documentation.
+The premise of the app is that a user gets multiple images and needs to select the common theme.
+At this point in time, only placeholder questions are used.
+
 
 ### Building the code
 
@@ -8,7 +10,7 @@ This is where you include your WebPart documentation.
 $ git clone the repo
 $ npm i
 $ npm i -g gulp
-$ gulp
+$ gulp serve
 ```
 
 This package produces the following:
@@ -21,6 +23,12 @@ This package produces the following:
 
 gulp clean - TODO
 gulp test - TODO
-gulp serve - TODO
+gulp serve - Builds and serves the image on [localhost:4321/temp/workbench.html](localhost:4321/temp/workbench.html)
 gulp bundle - TODO
 gulp package-solution - TODO
+
+### TODO's
+
+- build options
+- add real questions
+- add actual resulthandling
