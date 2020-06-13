@@ -2,16 +2,50 @@
 
 .game {
   .container {
-    max-width: 700px;
+    max-width: auto;
     margin: 0px auto;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
   }
 
-  .image {
-    max-width: 25%;
-    max-height: 25%;
-    background-color: $ms-color-themeSecondary;
-    border-color: $ms-color-themePrimary;
+  .questionBox {
+    @include ms-Grid;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
+    padding: inherit;
+
+    .imageBlock{
+      @include ms-Grid-row;
+      margin-bottom: 3%;
+      .image {
+        @include ms-Grid-col;
+        @include ms-sm6;
+        @include ms-md3;
+        max-width: 23%;
+        max-height: 23%;
+        margin: 0% 1%;
+
+        background-color: $ms-color-themeSecondary;
+        border-color: $ms-color-themePrimary;
+      }
+    }
+
+    .responseBlock{
+      @include ms-Grid-row;
+      .button{
+        @include ms-Grid-col;
+        max-width: 23%;
+        margin: 0% 2%;
+        .correct{
+          background-color: $ms-color-themeLighter;
+          border-color: $ms-color-themeLight;
+          color: $ms-color-themeLight;
+        }
+        .wrong{
+          background-color: $ms-color-themeDarker;
+          border-color: $ms-color-themeDark;
+          color: $ms-color-themeDark;
+        }
+      }
+    }
   }
 
   .row {

@@ -5,26 +5,14 @@ import { useState } from 'react';
 import ImageBox from './ImageBox';
 import QuestionService from './QuestionService';
 
-class QuizScreen extends React.Component<{},{questionBank, style, score}> {
+class QuizScreen extends React.Component<{},{questionBank, tries, score}> {
   constructor(props) {
     super(props);
     this.state = {
       questionBank: [],
-      style: "noAnswer",
+      tries: 0,
       score: 0,
     };
-
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
-
-  public handleChange(event) {
-    /* this.setState({value: event.target.value}); */
-  }
-
-  public handleSubmit(event) {
-    /* alert('A name was submitted: ' + this.state.value);
-    event.preventDefault(); */
   }
 
   public getQuestions = () => {
@@ -42,12 +30,12 @@ class QuizScreen extends React.Component<{},{questionBank, style, score}> {
   public computeAnswer = (answer, correctAnswer) => {
     if (answer === correctAnswer) {
         this.setState({
-            score: this.state.score + 1,
-            style: 'correctAnswer',
+          score: this.state.score + 1,
+          tries: this.state.tries + 1,
         });
     } else {
         this.setState({
-          style: 'wrongAnswer'
+          tries: this.state.tries + 1,
         });
     }
   }

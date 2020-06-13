@@ -11,9 +11,8 @@ export default class Game extends React.Component<IGameProps, {}> {
         <div className={ styles.container }>
           <div className={ styles.row }>
             <div className={ styles.column }>
-              <span className={ styles.title }>Welcome to SharePoint!</span>
-              <p className={ styles.subTitle }>Customize SharePoint experiences using Web Parts.</p>
-              <p className={ styles.description }>{escape(this.props.description)}</p>
+              <span className={ styles.title }>Welcome to ImageGame!</span>
+              <p className={ styles.subTitle }>{escape(this.props.description)}</p>
               <div className={styles.container}><QuizScreen /></div>
             </div>
           </div>
